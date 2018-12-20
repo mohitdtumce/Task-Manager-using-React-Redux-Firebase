@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const SignOutUser = () => {
+const SignedOutUser = () => {
     return (
         <ul className="right">
-            <li><NavLink to="/">Sign In</NavLink></li>
-            <li><NavLink to="/">Log In</NavLink></li>
+            <li><NavLink to="/sign-up">Sign In</NavLink></li>
+            <li><NavLink to="/sign-in">Log In</NavLink></li>
         </ul>
     );
 }
 
-export default SignOutUser;
+export default SignedOutUser;
