@@ -31,7 +31,7 @@ class CreateTask extends Component {
                         <textarea className="materialize-textarea" id="content" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
-                        <button className="btn green lighten-1 z-depth-0">Submit</button>
+                        <button className="btn orange lighten-1 z-depth-0">Submit</button>
                     </div>
                 </form>
             </div>

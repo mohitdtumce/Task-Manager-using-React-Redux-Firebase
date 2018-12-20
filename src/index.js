@@ -1,8 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Importing Assets
+import './assets/styles/index.css';
+
+// Importing Container
+import App from './containers/App';
+import { Provider } from "react-redux";
+
+import store from "./store";
+store.subscribe(() => {
+    console.log("Store updated", store.getState());
+})
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+);
 serviceWorker.unregister();
