@@ -3,13 +3,12 @@ import React from "react";
 // Import Sub-components
 import TaskSummary from "./TaskSummary";
 
-const TasksList = () => {
+const TasksList = ({ tasks }) => {
     return (
         <div className="task-list section">
-            <TaskSummary />
-            <TaskSummary />
-            <TaskSummary />
-            <TaskSummary />
+            {tasks && tasks.map(task => {
+                return <TaskSummary task={task} key={task.id} />
+            })}
         </div>
     );
 }
