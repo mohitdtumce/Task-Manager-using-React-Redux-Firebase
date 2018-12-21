@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { createTask } from "../../store/actions/taskAction";
 
 class CreateTask extends Component {
     state = {
@@ -8,7 +10,8 @@ class CreateTask extends Component {
 
     handleSubmit = (input) => {
         input.preventDefault();
-        console.log(this.state);
+        // console.log(this.state);
+        this.props.createTask(this.state)
     };
 
     handleChange = (input) => {
@@ -39,4 +42,9 @@ class CreateTask extends Component {
     }
 }
 
-export default CreateTask;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createTask: (task) => dispatch(createTask(task))
+    };
+};
+export default connect(null, mapDispatchToProps)(CreateTask);

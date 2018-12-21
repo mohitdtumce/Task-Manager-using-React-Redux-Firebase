@@ -1,5 +1,5 @@
 import React from "react";
-import * as priority from "../constants";
+import * as priority from "../../constants";
 const TaskSummary = ({task}) => {
     return (
         <div className="card z-depth-1 task-summary">

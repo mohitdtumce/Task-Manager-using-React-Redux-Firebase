@@ -1,5 +1,5 @@
 import React from 'react'
-import * as priority from "../constants";
+import * as priority from "../../constants";
 
 export default function TaskDetails(props) {
     const id = props.match.params.id;
